@@ -1,6 +1,4 @@
 import java.awt.Graphics;
-import java.sql.Time;
-import java.util.Arrays;
 
 public class Parte1 extends PlanoCartesiano {
     Transformaciones t = new Transformaciones();
@@ -29,6 +27,30 @@ public class Parte1 extends PlanoCartesiano {
 
             iiii = t.multiplicacion(t.escalacion(3, 3), yes);
             dibujarPN(t.newPoints(iiii, 0), t.newPoints(iiii, 1), g, 1, 1);
+
+            Thread.sleep(1000);
+            iiii = t.multiplicacion(t.escalacion(-2, -2, 3, 3), yes);
+            dibujarPN(t.newPoints(iiii, 0), t.newPoints(iiii, 1), g, 1, 1);
+            Thread.sleep(1000);
+
+            iiii = t.multiplicacion(t.escalacionIn(5, 5), yes);
+
+            dibujarPN(t.newPoints(iiii, 0), t.newPoints(iiii, 1), g, 1, 1);
+
+            Thread.sleep(1000);
+
+            iiii = t.multiplicacion(t.rotacion(90), yes);
+            dibujarPN(t.newPoints(iiii, 0), t.newPoints(iiii, 1), g, 1, 1);
+
+            Thread.sleep(1000);
+            iiii = t.multiplicacion(t.rotacion(1, 1, 90), yes);
+            dibujarPN(t.newPoints(iiii, 0), t.newPoints(iiii, 1), g, 1, 1);
+            Thread.sleep(1000);
+
+            iiii = t.multiplicacion(t.rotacionIn(90), yes);
+            dibujarPN(t.newPoints(iiii, 0), t.newPoints(iiii, 1), g, 1, 1);
+
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
