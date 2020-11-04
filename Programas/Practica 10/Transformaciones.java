@@ -65,7 +65,6 @@ public class Transformaciones {
         return Tidentidad;
     }
 
-    // nel no entiendo xd
     public double[][] escalacion(double x, double y, double sx, double sy) {
         double[][] Tidentidad = { { sx, 0, x * (1 - sx) }, { 0, sy, y * (1 - sy) }, { 0, 0, 1 } };
         return Tidentidad;
